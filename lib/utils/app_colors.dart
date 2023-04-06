@@ -29,4 +29,21 @@ class AppColors {
 
   // Orange
   static Color darkOrange = const Color(0xFFFFB74D);
+
+  static LinearGradient linearGradientColor = const LinearGradient(
+    begin: Alignment.topRight,
+    end: Alignment.bottomLeft,
+    stops: [
+      0.1,
+      // 0.4,
+      0.6,
+      // 0.9,
+    ],
+    colors: [
+      Colors.purple,
+      // Colors.red,
+      Colors.indigo,
+      // Colors.teal,
+    ],
+  );
 }

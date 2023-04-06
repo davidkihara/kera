@@ -54,15 +54,6 @@ class _AppDrawerState extends State<AppDrawer> {
             leading: const Icon(
               Icons.train,
             ),
-            title: const Text('Sleep'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.train,
-            ),
             title: const Text('Calories'),
             onTap: () {
               Navigator.pop(context);
@@ -82,15 +73,6 @@ class _AppDrawerState extends State<AppDrawer> {
               Icons.train,
             ),
             title: const Text('Blood Sugar'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.train,
-            ),
-            title: const Text('Medications'),
             onTap: () {
               Navigator.pop(context);
             },

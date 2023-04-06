@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kera/screens/homepage/dashboard.dart';
+import 'package:kera/screens/welcome/welcome.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Dashboard(),
+      home: Welcome(),
     );
   }
 }
