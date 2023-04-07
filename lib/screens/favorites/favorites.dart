@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kera/screens/favorites/widgets/favorite_card.dart';
 import 'package:kera/screens/recipes/widgets/recipe_recommended.dart';
+import 'package:kera/utils/app_colors.dart';
 
 class Favorites extends StatefulWidget {
   const Favorites({Key? key}) : super(key: key);
@@ -14,10 +15,22 @@ class _FavoritesState extends State<Favorites> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favorites'),
+        title: const Text(
+          "Favorites",
+        ),
         centerTitle: true,
         elevation: 0,
-        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.delete,
+              color: Colors.red,
+            ),
+          ),
+        ],
+        backgroundColor: AppColors.lightPrimary,
+        foregroundColor: AppColors.darkPrimary,
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),

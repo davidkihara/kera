@@ -5,15 +5,15 @@ import 'custom_image.dart';
 import 'favorite_box.dart';
 
 class PopularItem extends StatelessWidget {
-  const PopularItem(
-      {Key? key,
-      required this.data,
-      this.width = 200,
-      this.height = 220,
-      this.radius = 15,
-      this.onTap,
-      this.onFavoriteTap})
-      : super(key: key);
+  const PopularItem({
+    Key? key,
+    required this.data,
+    this.width = 200,
+    this.height = 220,
+    this.radius = 5,
+    this.onTap,
+    this.onFavoriteTap,
+  }) : super(key: key);
   final Map data;
   final double width;
   final double height;
@@ -68,7 +68,7 @@ class PopularItem extends StatelessWidget {
                 padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
                 decoration: BoxDecoration(
                   color: cardColor,
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(5),
                   boxShadow: [
                     BoxShadow(
                       color: shadowColor.withOpacity(0.1),
@@ -161,3 +161,10 @@ class PopularItem extends StatelessWidget {
     );
   }
 }
+
+
+// ListView.builder(
+//             shrinkWrap: true,
+//             physics: const NeverScrollableScrollPhysics(),
+//             itemCount: futureFood.length,
+//             itemBuilder: ),

@@ -13,7 +13,7 @@ class _RecipeRecommendedState extends State<RecipeRecommended> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(15, 0, 0, 15),
+      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(

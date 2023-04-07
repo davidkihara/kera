@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kera/screens/auth/register.dart';
+import 'package:kera/screens/home.dart';
 import 'package:kera/utils/app_colors.dart';
 
 class Welcome extends StatefulWidget {
@@ -61,7 +61,7 @@ class _WelcomeState extends State<Welcome> {
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Register()),
+                        MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     },
                     style: ButtonStyle(

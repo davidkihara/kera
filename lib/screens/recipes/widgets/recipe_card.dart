@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kera/models/data.dart';
+import 'package:kera/screens/recipes/recipe_details.dart';
 import 'package:kera/screens/widgets/widgets/popular_item.dart';
 
 class RecipeCard extends StatefulWidget {
@@ -13,7 +14,7 @@ class _RecipeCardState extends State<RecipeCard> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.only(left: 15),
+      padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
       scrollDirection: Axis.horizontal,
       child: Row(
           children: List.generate(
@@ -28,7 +29,14 @@ class _RecipeCardState extends State<RecipeCard> {
                     !populars[index]["is_favorited"];
               });
             },
-            onTap: () {},
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => RecipeDetails(
+                  recipe: populars[index],
+                ),
+              ),
+            ),
           ),
         ),
       )),

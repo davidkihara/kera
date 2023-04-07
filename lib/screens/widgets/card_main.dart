@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kera/screens/homepage/dashboard.dart';
+import 'package:kera/screens/home.dart';
 import 'package:kera/screens/widgets/custom_clipper.dart';
 import 'package:kera/utils/app_colors.dart';
 import 'package:kera/utils/app_globals.dart';
@@ -101,7 +101,7 @@ class CardMain extends StatelessWidget {
               debugPrint("CARD main clicked. redirect to details page");
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Dashboard()),
+                MaterialPageRoute(builder: (context) => HomePage()),
               );
             },
           ),

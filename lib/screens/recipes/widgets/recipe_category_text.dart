@@ -7,7 +7,9 @@ class RecipeCategoryText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(12),
+      padding: EdgeInsets.only(
+        top: 8,
+      ),
       child: Text(
         text,
         style: const TextStyle(

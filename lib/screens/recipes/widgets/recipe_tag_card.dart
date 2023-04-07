@@ -19,7 +19,7 @@ class _RecipeTagCardState extends State<RecipeTagCard> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(15, 5, 7, 10),
+      padding: const EdgeInsets.fromLTRB(0, 5, 7, 10),
       scrollDirection: Axis.horizontal,
       child: Row(
         children: List.generate(

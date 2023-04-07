@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kera/screens/appointments/appointments.dart';
 import 'package:kera/screens/favorites/favorites.dart';
-import 'package:kera/screens/homepage/dashboard.dart';
-import 'package:kera/screens/notifications/notifications.dart';
-import 'package:kera/screens/nutrition/nutrition.dart';
 import 'package:kera/screens/recipes/recipes.dart';
 import 'package:kera/screens/settings/settings.dart';
 
@@ -38,9 +34,10 @@ class _HomePageState extends State<HomePage> {
       body: PageView(
         controller: pageController,
         children: [
-          Dashboard(),
-          const Recipes(),
-          const Nutrition(),
+          const Recipes(
+            data: {},
+          ),
+          // const Nutrition(),
           const Favorites(),
           const Settings(),
         ],
@@ -53,14 +50,10 @@ class _HomePageState extends State<HomePage> {
             icon: Icon(Icons.home),
             label: "Home",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_view_day),
-            label: "Recipes",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.food_bank),
-            label: "Nutrition",
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.food_bank),
+          //   label: "Nutrition",
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
             label: "Favorites",
