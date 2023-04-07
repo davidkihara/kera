@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:kera/screens/appointments/appointments.dart';
+import 'package:kera/screens/favorites/favorites.dart';
 import 'package:kera/screens/homepage/dashboard.dart';
 import 'package:kera/screens/notifications/notifications.dart';
 import 'package:kera/screens/nutrition/nutrition.dart';
+import 'package:kera/screens/recipes/recipes.dart';
 import 'package:kera/screens/settings/settings.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     pageController.jumpToPage(index);
     // pageController.animateToPage(
     //   index,
-    //   duration: Duration(milliseconds: 1000),
+    //   duration: const Duration(milliseconds: 1000),
     //   curve: Curves.easeIn,
     // );
   }
@@ -37,9 +39,9 @@ class _HomePageState extends State<HomePage> {
         controller: pageController,
         children: [
           Dashboard(),
-          const Appointments(),
+          const Recipes(),
           const Nutrition(),
-          const Notifications(),
+          const Favorites(),
           const Settings(),
         ],
       ),
@@ -53,15 +55,15 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_view_day),
-            label: "Appointments",
+            label: "Recipes",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.upload),
-            label: "Upload",
+            icon: Icon(Icons.food_bank),
+            label: "Nutrition",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.notifications),
-            label: "Notifications",
+            icon: Icon(Icons.favorite),
+            label: "Favorites",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
@@ -69,8 +71,8 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.brown,
+        selectedItemColor: Colors.yellow,
+        unselectedItemColor: Colors.black,
         onTap: onTapped,
         backgroundColor: Colors.teal[200],
       ),

@@ -36,6 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.5
   dio: ^5.1.1
+  flutter_svg: ^1.0.3
+  cached_network_image: ^3.1.0
+  badges: ^2.0.2
+  shared_preferences: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +67,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/images/category/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -12,8 +12,17 @@ class _AppointmentsState extends State<Appointments> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Appointments"),
+        title: const Text("Appointments"),
         centerTitle: true,
+        automaticallyImplyLeading: false,
+        elevation: 0,
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [],
+          ),
+        ),
       ),
     );
   }
