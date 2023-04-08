@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:kera/models/recipes/foods.dart';
+import 'package:kera/screens/recipes/recipe_details.dart';
 import 'package:kera/screens/widgets/widgets/custom_image.dart';
 import 'package:kera/screens/widgets/widgets/favorite_box.dart';
 import 'package:kera/utils/app_apis.dart';
@@ -77,7 +78,14 @@ class _RecipesState extends State<Recipes> {
             itemBuilder: (BuildContext context, int index) {
               Food myCurrentFood = futureFood[index];
               return GestureDetector(
-                onTap: () {},
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => RecipeDetails(
+                      myCurrentFood: futureFood[index],
+                    ),
+                  ),
+                ),
                 child: Container(
                   width: width,
                   height: height,
@@ -235,8 +243,6 @@ class _RecipesState extends State<Recipes> {
       headers: AppApi().setRecipeHeaders(),
     );
     var body = json.decode(res.body);
-
-    print(body);
 
     // Map<String, dynamic> FoodData = json.decode(res.body);
     // var data = Foods.fromJson(FoodData);

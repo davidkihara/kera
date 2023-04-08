@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kera/models/data.dart';
+import 'package:kera/screens/homepage/homepage.dart';
 import 'package:kera/screens/recipes/recipe_details.dart';
 import 'package:kera/screens/widgets/widgets/popular_item.dart';
 
@@ -32,9 +33,9 @@ class _RecipeCardState extends State<RecipeCard> {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => RecipeDetails(
-                  recipe: populars[index],
-                ),
+                builder: (context) => HomePage(
+                    // recipe: populars[index],
+                    ),
               ),
             ),
           ),
